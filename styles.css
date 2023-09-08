@@ -1,0 +1,199 @@
+/* Reset some default styles */
+html, body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #9ce4cc;
+    font-family: 'Markazi Text', Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  
+}
+
+
+   
+header > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(210,186,233);
+    text-align: center;
+    
+
+}
+
+nav ul{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+nav ul li a {
+    text-decoration: none;
+    
+}
+
+a:visited{ 
+    
+    color: red;
+}
+
+
+nav ul li:hover {
+    background-color:rgb(95, 18, 167);
+    border-radius: 4rem;
+    color: white;
+    transition: 0.3s;
+
+}
+
+nav ul li a:hover{
+    color: white;
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+h2 {
+    font-size: 2rem;
+    text-decoration: overline underline;
+    color:rgb(168, 181, 29)
+    
+}
+h3 {
+    font-size: 2rem;
+    text-decoration: overline underline;
+    text-decoration-thickness: auto;
+    color:rgb(168, 181, 29);
+    text-shadow: 2px 2px 5px red;
+    
+}
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+  }
+.container img {vertical-align: middle;}
+
+.container .content{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  
+  /* mobile version */
+
+  @media all and (max-width: 768px) {
+    nav {
+        width: 100%;
+        height: auto;
+    }
+    nav ul  {
+       
+        flex-direction:column;
+        text-align:center;
+    }
+    nav ul li a {
+        display: block;
+        line-height: 25px;
+        padding: 20px;
+    }
+
+    nav ul li a:hover{
+        background-color:yellow;
+        color:black;
+        padding-left:35px;
+        transition: 0.3s;
+        border-radius:6px;
+    } 
+   
+  }
+
+/* Container for flexboxes */
+.row
+{
+  display: -webkit-flex;
+  display:flex;
+  
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+}
+article.column {
+  position: static;
+  border: 3px solid #73AD21;
+  
+  
+}
+article.column img{
+
+    height :300px;
+}
+
+article.column h2{
+
+    width:100%;
+    height: 70px;
+    
+}
+/* mobile version */
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 768px) {
+    .row {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+p::first-letter{
+    font-size: 2rem;
+}
+
+p{
+    letter-spacing: 1px;
+    line-height: 20px;
+    text-align: justify;
+    
+}
+footer {
+   display: flex;
+   justify-content: space-between;
+  align-items: center;
+}
+footer div {
+    flex:1;
+}
